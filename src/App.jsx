@@ -1,11 +1,14 @@
 import React,{useState} from 'react';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Routes, Navigate} from 'react-router-dom';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 import Home from './components/Home';
-import Dashboard from'./components/Dashboard'
+import Dashboard from'./components/Dashboard';
+
+
 
 const App = () => {
+
 
   const [users, setUsers] = useState([])
   

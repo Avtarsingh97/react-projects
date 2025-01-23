@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {ToastContainer, toast} from 'react-toastify';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate} from 'react-router-dom';
 
 
 function SignUp({users, setUsers}) {
@@ -11,6 +11,7 @@ function SignUp({users, setUsers}) {
         confirmPassword:''
     })
     
+    const navigate = useNavigate();
     
     const [error, setError] = useState('')
     
@@ -26,11 +27,6 @@ function SignUp({users, setUsers}) {
         
         
     }
-
-    useEffect(() => {
-        console.log("Updated Users: ", users);
-        
-      }, [users]);
     
     
     const submitHandler = (e)=>{
@@ -69,10 +65,12 @@ function SignUp({users, setUsers}) {
           confirmPassword:''
         });
         
-        toast.success('Login Successful!', {
-            autoClose: 5000,
+        toast.success('Account Created Successfully!', {
+            autoClose: 500,
+            onClose: () => navigate('/signin'),
           });
 
+        
         
     }
 

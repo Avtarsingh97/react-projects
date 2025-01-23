@@ -28,8 +28,11 @@ function SignIn({ users }) {
     const user = users.find((user) => user.email === credentials.email && user.password === credentials.password);
 
     if (user) {
+      localStorage.setItem('username', user.fullName);
+      localStorage.setItem('isLoggedIn', 'true');
       toast.success("Sign in Successful!");
-      navigate("/dashboard")
+
+      navigate("/dashboard");
     } else {
       toast.error("Invalid email or password.");
     }

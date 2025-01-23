@@ -7,7 +7,7 @@ function Home() {
       <div className="home-section rounded-2xl m-auto shadow-xl hover:shadow-2xl">
         <h1 className="text-white text-2xl m-auto w-[80%] py-6 text-center font-extrabold">Welcome to <br/>Login-Signup Home Page</h1>
         <hr />
-        <p className="text-white text-sm m-auto w-[80%] py-6 text-center font-bold">This is build to practice Login and SignUp logic, How thinks work and connect to eachother.</p>
+        <p className="text-white text-sm m-auto w-[80%] py-6 text-center font-bold">"This platform is designed to practice and understand the logic behind Login and Sign-Up functionality, <br/>exploring how various components work together and integrate seamlessly."</p>
 
         <div className="btnWrapper flex flex-col w-[90%] m-auto p-6 rounded-xl sm:flex-row">
           <div className="loginBtn w-full text-white text-center p-4">
